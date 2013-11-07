@@ -5,6 +5,7 @@
 @import "fonts"
 @import "type"
 @import "nav"
+@import "compass/css3"
 
 body
   background: $white
@@ -74,6 +75,17 @@ body
         width: 312px
         height: 172px
         margin: 0 auto
+        .bbq-text
+          width: 340px
+          margin: 100px auto 0
+          text-align: left
+          p
+            color: $bbqtype
+            font: 21px/28px $tradegothic
+            @include text-shadow($textshadow 1px 1px 1px)
+            span
+              font: 32px/12px $clabol
+              font-size: 32px
   .respect
     margin: 0
     .respect-graphic
@@ -88,7 +100,73 @@ body
     height: 25px
   .menu
     height: 2413px
-    background: $black
+    padding: 150px 0 0 0
+    background: url('/images/bbq-shot.jpg') no-repeat center 180px $black
+    .menu-header
+      margin: 0 auto 0
+      width: 500px
+      h2
+        font: 54px/0px $clabol
+        color: $white
+      h6
+        font: 18px/12px $tradegothic
+        color: $gold
+        letter-spacing: 2px
+        text-transform: uppercase
+        padding: 0 20px
+        display: block
+        .seperator
+          position: relative
+          top: -5px
+          &.left
+            margin: 0 20px 0 0
+          &.right
+            margin: 0 0 0 20px
+      p
+        font: 15px/14px $clabol
+        color: $white
+        letter-spacing: 1px
+
+    .menu-table
+      h1
+        font: 36px/20px $clabol
+        color: $white
+        letter-spacing: 2px
+        text-transform: capitalize
+      .menu-spacer
+        margin: 30px auto
+        display: block
+      table
+        width: 750px
+        margin: 0px auto
+        tr
+          &:nth-child(even)
+            background-color: #191817
+          td
+            padding: 0 10px
+            text-align: left
+            height: 70px
+            font: 22px/30px $clabol
+            color: $white
+
+            h5
+              font: 22px/30px $clabol
+              font-weight: normal
+              letter-spacing: 1px
+              color: $menu
+              margin: 0
+            p
+              float: left
+              font-size: 22px
+              color: $menu
+              margin: 3px 10px 0 0
+            span
+              font: 14px/0px $clabol
+              color: $white
+              text-decoration: underline
+              position: relative
+              top: -6px
+
   .map
     display: block
     background: url('/images/map.jpg') no-repeat center
