@@ -25,6 +25,7 @@ body
     padding: 56px 0 0 0
     text-align: center
     background: url('/images/sake-background.jpg') no-repeat center top
+    background-color: $black
     .sake-graphic
       display: inline-block
       clear: both
@@ -39,41 +40,46 @@ body
     height: 804px
     width: $site-width
     margin: 0
+    background-color: $sauce
     .sauce-graphic
       display: inline-block
       background: url('/images/sauce-bottles.png') no-repeat center
       width: $site-width
       height: 558px
       padding: 309px 0 0 0
-      .copy-left
-        float: left
-        text-align: right
-        width: 192px
-        margin: 0 0 0 200px
-        color: $gold
-        h6
-          color: $brown
-      .copy-right
-        text-align: left
-        float: right
-        text-align: left
-        width: 192px
-        margin: 0 180px 0 0
-        color: $gold
-        h6
-          color: $brown
+      .copy-wrapper
+        width: 1000px
+        margin: 0 auto 0
+        .copy-left
+          float: left
+          text-align: right
+          width: 192px
+          margin: 0 0 0 70px
+          color: $gold
+          h6
+            color: $brown
+        .copy-right
+          text-align: left
+          float: right
+          text-align: left
+          width: 192px
+          margin: 0 50px 0 0
+          color: $gold
+          h6
+            color: $brown
       .five-star
         clear: both
         width: 271px
         margin: 352px auto 0
   .bbq
     width: $site-width
-    height: 800px
+    height: 834px
+    background-color: $bbq
     .bbq-graphic
       display: block
       background: url('/images/bbq-background.jpg') no-repeat center
       width: $site-width
-      height: 800px
+      height: 834px
       .we-make-bbq
         padding: 160px 0 0 0
         width: 312px
@@ -92,6 +98,7 @@ body
               font-size: 32px
   .respect
     margin: 0
+    background-color: $respect
     .respect-graphic
       display: block
       background: url('/images/respect.jpg') no-repeat center
@@ -99,7 +106,7 @@ body
       height: 777px
   .stars-border
     display: block
-    background: url('/images/stars-border.jpg') no-repeat center
+    background: url('/images/stars-border.jpg') repeat center
     width: $site-width
     height: 25px
   .menu
@@ -199,3 +206,27 @@ body
     background: url('/images/map.jpg') no-repeat center
     width: $site-width
     height: 347px
+
+  .store
+    height: 700px
+    width: $site-width
+    background: url('/images/stores.jpg') no-repeat center
+    background-color: $black
+    .store-text
+      margin: 0 auto 0
+      width: 530px
+      text-align: left
+      padding: 0 0 0 150px
+      h1, h2, h4
+        font-family: $clabol
+        text-transform: none
+        color: $white
+        line-height: 25px
+        +text-shadow(rgba($black, .6) -3px 4px 3px)
+      h1
+        font-size: 72px
+        padding: 280px 0 0 0
+      h2
+        font-size: 48px
+      h4
+        font-size: 28px
