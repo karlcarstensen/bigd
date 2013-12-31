@@ -5,6 +5,7 @@
 @import "fonts"
 @import "type"
 @import "nav"
+@import "fullPage"
 @import "compass/css3"
 
 body
@@ -20,13 +21,17 @@ body
   margin: 0px auto
   width: $site-width
   .sake-content
-    height: 644px
+    //height: 644px
     top: $nav-height
     position: relative
     margin: 0
-    padding: 56px 0 0 0
+    padding: 100px 0 0 0
     text-align: center
     background: url('/images/sake-background.jpg') no-repeat center top
+    background-size: cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
     background-color: $black
     .sake-graphic
       display: inline-block
@@ -39,14 +44,18 @@ body
         display: none
   .sauce-content
     background: url('/images/five-star-background.jpg') no-repeat center top
-    height: 804px
-    width: $site-width
-    margin: 0
     background-color: $sauce
+    background-size: cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    //height: 804px
+    //width: $site-width
+    margin: 100px 0 0 0
     .sauce-graphic
       display: inline-block
       background: url('/images/sauce-bottles.png') no-repeat center
-      width: $site-width
+      //width: $site-width
       height: 558px
       padding: 309px 0 0 0
       .copy-wrapper
@@ -74,18 +83,22 @@ body
         width: 271px
         margin: 352px auto 0
   .bbq
-    width: $site-width
-    height: 834px
+    //width: $site-width
+    //height: 834px
     background-color: $bbq
+    background: url('/images/bbq-background.jpg') no-repeat center top
+    background-size: cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
     .bbq-graphic
-      display: block
-      background: url('/images/bbq-background.jpg') no-repeat center
-      width: $site-width
-      height: 834px
+      //display: block
+      //width: $site-width
+      //height: 100%
+      padding: 70px 0 0 0
       .we-make-bbq
-        padding: 160px 0 0 0
         width: 312px
-        height: 172px
+        //height: 172px
         margin: 0 auto
         .bbq-text
           width: 340px
@@ -104,11 +117,16 @@ body
   .respect
     margin: 0
     background-color: $respect
+    padding: 100px 0 0 0
     .respect-graphic
-      display: block
-      background: url('/images/respect.jpg') no-repeat center
-      width: $site-width
-      height: 777px
+      //display: block
+      height: 100%
+      background: url('/images/respect-bkgnd.jpg') no-repeat center
+      background-size: cover
+      -webkit-background-size: cover
+      -moz-background-size: cover
+      -o-background-size: cover
+      //width: $site-width
       .respect-img
         margin: 320px 0 0 0
         width: 420px
@@ -126,11 +144,14 @@ body
     height: 25px
   .menu
     // height: 3413px
-    padding: 150px 0 110px 0
-    background: url('/images/bbq-shot.jpg') no-repeat center 180px $black
+    padding: 50px 0 110px 0
+    background-color: $black
     .menu-header
-      margin: 0 auto 0
-      width: 500px
+      background: url('/images/bbq-shot.jpg') no-repeat center 0px $black
+      background-position: fixed
+      margin: 4px auto 0
+      width: 975px
+      height: 568px
       h3
         font: 54px/0px $clabol
         color: $white
@@ -160,6 +181,7 @@ body
         color: $white
         letter-spacing: 2px
         text-transform: capitalize
+        padding: 0px
       h2
         font: 36px/20px $clabol
         color: $white
@@ -171,6 +193,7 @@ body
       table
         width: 750px
         margin: 0px auto
+        padding: 0 0 100px 0
         tr
           &:nth-child(even)
             background-color: #191817
@@ -200,7 +223,7 @@ body
               position: relative
               top: -6px
     .address
-      margin: 0 auto 0
+      margin: 0 auto 50px
       width: 700px
       h5
         font: 18px/30px $clabol
@@ -229,16 +252,24 @@ body
       .flourish
         margin: 20px auto 50px
   .map
-    display: block
-    background: url('/images/map.jpg') no-repeat center
-    width: $site-width
-    height: 347px
+    background-color: $dark
+    // display: block
+    // background: url('/images/map.jpg') no-repeat center
+    // width: $site-width
+    // height: 347px
+    .map-iframe
+      height: 50%
+      width: 100%
 
   .store
-    height: 700px
-    width: $site-width
-    background: url('/images/stores.jpg') no-repeat center
+    //height: 700px
+    //width: $site-width
+    background: url('/images/stores.jpg') no-repeat center 95px
     background-color: $black
+    background-size: cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
     .store-text
       margin: 0 auto 0
       width: 530px

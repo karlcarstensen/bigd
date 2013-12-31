@@ -1,26 +1,26 @@
 <div id="container">
 
   <div class="nav-container">
-    <ul>
-      <li><a href="#sauce">The Sauce</a></li>
-      <li><a href="#spot">The Spot</a></li>
-      <li class="logo" href="#"></li>
-      <li><a href="#store">The Store</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <ul id="main-nav">
+      <li data-menuanchor="sauce"><a href="#sauce">The Sauce</a></li>
+      <li data-menuanchor="spot"><a href="#spot">The Spot</a></li>
+      <li class="logo" href="#"><a href="http://0.0.0.0:4567/"></a></li>
+      <li data-menuanchor="store"><a href="#store">The Store</a></li>
+      <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
     </ul>
   </div>
 
   <!-- For the Sake of the Sauce -->
-  <div id="sauce" class="sake-content">
+  <div class="section sake-content">
     <div class="sake-graphic">
       <h1>For the Sake of the Sauce - Big D</h1>
     </div>
   </div>
 
-  <!-- The Spot -->
-  <div class="sauce-content">
+  <!-- The Sauce -->
+  <div id="sauce" name="sauce" class="section sauce-content">
     <div class="sauce-graphic">
-      <div id="spot" class="copy-wrapper">
+      <div class="copy-wrapper">
         <div class="copy-left">
           <h6>Original</h6>
           <p>Not normal. See, we set the bar high. Then we say "eff you, bar!" and go even higher. That’s where you'll find our Big D Original.</p>
@@ -36,29 +36,28 @@
     </div>
   </div>
 
-  <div class="bbq">
+  <div id="bbq" name="bbq" class="section bbq">
     <div class="bbq-graphic">
       <div class="we-make-bbq">
         <img src="../images/we-make-bbq.png" width="320px" />
         <div class="bbq-text">
           <p><span>A</span>nd if you're reading this, you're in good company. See, we've been celebrating the union of meat and flame for generations. It's in our blood. It's also in our restaurant and mason jars. Wherin you'll find only the finest ingredients, prepared flawlessly and served liberally. That's a promise.</p>
-          <p>But don’t just take our word for it, see what our friends on <img src="images/yelp.png" class="yelp-icon" /> have to say.</p>
+          <p>But don’t just take our word for it, see what our friends on <a href="http://www.yelp.com/biz/big-d-barbecue-mansfield" target="_blank"><img src="images/yelp.png" class="yelp-icon" /></a> have to say.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="respect">
+  <div class="section respect">
     <div class="respect-graphic">
       <img src="/images/respect.png" class="respect-img" />
       <div><a href="#" class="play-btn"></a></div>
     </div>
   </div>
-  <div class="stars-border">
-  </div>
+
 
   <!-- Menu -->
-  <div class="menu">
+  <div id="spot" name="spot" class="section menu">
     <div class="menu-header">
       <h6>Join us at</h6>
       <h3 class="bigd-header">Big D Barbecue</h3>
@@ -66,7 +65,6 @@
       <p>For the most delicious BBQ you ever tasted.</p>
       <p><img src="images/star.png" /> We've got a bib waitin for ya. <img src="images/star.png" /></p>
     </div>
-
     <div class="menu-table">
       <h1>Menu</h1>
       <img src="images/menu-spacer.jpg" class="menu-spacer" />
@@ -212,12 +210,12 @@
   </div>
 
   <!-- The Map -->
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x864e61aa1bb420a1%3A0xa2e71701391c2ce6!2s226+N+Walnut+Creek+Dr%2C+Mansfield%2C+TX+76063!5e0!3m2!1sen!2sus!4v1387867843688" width="100%" height="347" frameborder="0" style="border:0"></iframe>
+  <div id="map" class="section map">
+    <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x864e61aa1bb420a1%3A0xa2e71701391c2ce6!2s226+N+Walnut+Creek+Dr%2C+Mansfield%2C+TX+76063!5e0!3m2!1sen!2sus!4v1387867843688" width="100%" frameborder="0" style="border:0"></iframe>
   </div>
 
   <!-- The Store -->
-  <div class="store">
+  <div name="store" class="section store">
     <div class="store-text">
       <h1>BBQ swag?</h1>
       <h2>Now thats tasty.</h2>
@@ -226,7 +224,7 @@
   </div>
 
   <!-- Contact -->
-  <div class="contact">
+  <div name="contact" class="section contact">
     <h2>Don't be a stranger</h2>
     <ul>
       <li class="yelp"><a href="http://www.yelp.com/biz/big-d-barbecue-mansfield" target="_blank"></a></li>
@@ -240,17 +238,19 @@
   </div>
 
   <!-- Shots -->
-  <div class="shots">
+  <div class="section shots">
     <div class="shots-header">
       <img src="images/shots-from-the-grill.jpg" />
     </div>
     <iframe src="http://www.intagme.com/in/?u=YmlnZGJhcmJlY3VlfGlufDMyMHw4fDJ8fG5vfDB8dW5kZWZpbmVk" allowTransparency="true" frameborder="0" scrolling="no" class="instafeed"></iframe>
+
+    <!-- Legal -->
+    <div class="legal">
+      <p class="fl">&copy; Big D Barbeque</p>
+      <p class="fr"><a href="#">Back to Top</a></p>
+    </div>
   </div>
 
-  <!-- Legal -->
-  <div class="legal">
-    <p class="fl">&copy; Big D Barbeque</p>
-    <p class="fr"><a href="#">Back to Top</a></p>
-  </div>
+
 
 </div><!-- #container -->
