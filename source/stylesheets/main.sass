@@ -291,9 +291,9 @@ body
 
   .contact
     margin: 0 auto
-    height: 700px
-    width: 397px
-    padding: 185px 0 0 0
+    // height: 700px
+    width: 400px
+    padding: 40px 0 0 0
     h2
       font-family: $clabol
       text-transform: none
@@ -301,13 +301,13 @@ body
       color: $black
       line-height: 25px
       margin: 0
-      padding: 0
+      padding: 3px 0 0 0
     p
       color: $gold
       text-align: left
     ul
       width: 400px
-      margin: 50px auto
+      margin: 30px auto
       height: 42px
       padding: 0
       li
@@ -332,6 +332,57 @@ body
           display: block
           width: 100%
           height: 100%
+    form
+      text-align: left
+      .form-spacer
+        margin: 0 0 10px 0
+      label
+        font-family: $clabol
+        font-weight: normal
+        clear: both
+        color: $gold
+        text-align: left
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 13px
+      .error
+        color: $red
+        margin: 0 0 10px 0
+      input
+        clear: both
+        border: none
+        background-color: #faf6f0
+        border: 1px solid #faf6f0
+        height: 58px
+        width: 378px
+        margin: 8px 0px 20px
+        padding: 0 10px
+        border-radius: 8px
+        -webkit-border-radius: 8px
+        -moz-border-radius: 8px
+        -o-border-radius: 8px
+        &[type=text]
+          font-family: $clabol
+          font-weight: normal
+          color: $black
+          font-size: 20px
+          letter-spacing: 1px
+          &.error
+            border: 1px solid $red
+            margin: 8px 0 2px 0
+            padding: 0 10px
+            width: 378px
+      .submit
+        color: $white
+        font-family: $clabol
+        font-weight: normal
+        font-size: 22px
+        letter-spacing: 2px
+        background-color: $red
+        width: 400px
+        margin: 0
+        padding: 0
+
   .shots
     height: 800px
     width: $site-width

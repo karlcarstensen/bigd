@@ -12,31 +12,6 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="Resource-type" content="Document" />
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script>
-      var map;
-      function initialize() {
-        var myLatlng = new google.maps.LatLng(32.565477, -97.135652);
-        var mapOptions = {
-          zoom: 16,
-          center: myLatlng
-          //zoomControl: false,
-          //scaleControl: false,
-          // scrollwheel: false,
-          //navigationControl: false,
-          //mapTypeControl: false,
-          // draggable: false
-          //disableDoubleClickZoom: true
-        };
-        map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map
-        });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
 
     <%= stylesheet_link_tag "normalize", "main" %>
     <%= javascript_include_tag  "all" %>
@@ -47,7 +22,12 @@
   </body>
   <script type="text/javascript">
     $(document).ready(function() {
-      $.fn.fullpage();
+      $.fn.fullpage({
+        'anchors': [],
+        'menu': '#main-nav',
+        'paddingTop': 100,
+        'scrollOverflow': true
+      });
     });
   </script>
 

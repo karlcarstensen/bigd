@@ -235,6 +235,31 @@
     </ul>
     <p>Want us to cater your next event? Wanna get all the latest BBQ-related news? Maybe you just wanna say howdy?</p>
     <p>Please do, we’d love to hear from ya.</p>
+    <form id="contactform" name="contactform" method="post" action="send_form_email.php">
+      <div class="form-spacer">
+        <label>NAME <sup>*</sup></label>
+        <input type="text" name="name" required />
+      </div>
+      <div class="form-spacer">
+        <label>EMAIL <sup>*</sup></label>
+        <input id="email" type="text" name="email" />
+      </div>
+      <div class="form-spacer">
+        <label>PHONE NUMBER</label>
+        <input type="text" name="phone"  />
+      </div>
+      <input class="submit" type="submit" value="Submit" />
+    </form>
+    <script>
+      $("#contactform").validate({
+        rules: {
+          email: {
+            required: true,
+            email: true
+          }
+        }
+      });
+    </script>
   </div>
 
   <!-- Shots -->
