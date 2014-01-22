@@ -1,12 +1,13 @@
 @charset "utf-8"
 
 // Import Partials and Dependencies
+@import "compass/css3"
 @import "variables"
 @import "fonts"
 @import "type"
 @import "nav"
+@import "modal"
 @import "fullPage"
-@import "compass/css3"
 
 body
   background: $white
@@ -38,7 +39,7 @@ body
       clear: both
       margin: 0 auto
       width: 416px
-      height: 504px
+      height: 630px
       background: url('/images/sake-of-the-sauce.png') no-repeat center top
       h1
         display: none
@@ -51,16 +52,17 @@ body
     -o-background-size: cover
     //height: 804px
     //width: $site-width
-    margin: 100px 0 0 0
+    margin: 10px auto 0
     .sauce-graphic
       display: inline-block
       background: url('/images/sauce-bottles.png') no-repeat center
       //width: $site-width
-      height: 558px
-      padding: 309px 0 0 0
+      height: 530px
+      padding: 0
+      box-sizing: border-box
       .copy-wrapper
         width: 1000px
-        margin: 0 auto 0
+        margin: 140px auto 0
         .copy-left
           float: left
           text-align: right
@@ -79,9 +81,8 @@ body
           h6
             color: $brown
       .five-star
-        clear: both
         width: 271px
-        margin: 352px auto 0
+        margin: 480px auto 0
   .bbq
     //width: $site-width
     //height: 834px
@@ -95,7 +96,7 @@ body
       //display: block
       //width: $site-width
       //height: 100%
-      padding: 70px 0 0 0
+      padding: 120px 0 0 0
       .we-make-bbq
         width: 312px
         //height: 172px
@@ -108,6 +109,8 @@ body
             color: $bbqtype
             font: 21px/32px $tradegothic
             @include text-shadow($textshadow 1px 1px 1px)
+            &.yelp-text
+              line-height: 10px
             span
               font: 32px/12px $clabol
               font-size: 32px
@@ -128,7 +131,7 @@ body
       -o-background-size: cover
       //width: $site-width
       .respect-img
-        margin: 320px 0 0 0
+        margin: 200px 0 0 0
         width: 420px
       .video
         margin: 0 auto
@@ -139,6 +142,13 @@ body
         background: url('/images/play-btn.png') no-repeat center
         display: block
         margin: 20px auto 0
+        border: none
+      #myModal
+        display: none
+        .modal-header
+          text-align: right
+        .modal-video
+          text-align: center
 
   .stars-border
     display: block
@@ -146,15 +156,14 @@ body
     width: $site-width
     height: 25px
   .menu
-    // height: 3413px
-    padding: 50px 0 110px 0
+    padding: 160px 0 110px 0
     background-color: $black
     .menu-header
       background: url('/images/bbq-shot.jpg') no-repeat center 0 $black
       background-position: fixed
       margin: 4px auto 0
       width: 975px
-      height: 568px
+      height: 640px
       h3
         font: 54px/0 $clabol
         color: $white
@@ -179,6 +188,8 @@ body
         letter-spacing: 1px
 
     .menu-table
+      position: relative
+      top: -100px
       h1
         font: 36px/20px $clabol
         color: $white
@@ -205,8 +216,9 @@ body
             padding: 0 10px
             text-align: left
             height: 70px
-            font: 22px/30px $clabol
+            font: 28px/30px $clabol
             color: $white
+            letter-spacing: 1px
 
             h5
               font: 22px/30px $clabol
@@ -224,7 +236,7 @@ body
               color: $white
               text-decoration: underline
               position: relative
-              top: -6px
+              top: -10px
     .address
       margin: 0 auto 50px
       width: 700px
@@ -255,7 +267,7 @@ body
       .flourish
         margin: 20px auto 50px
   .map
-    background-color: $dark
+    background-color: $white
     // display: block
     // background: url('/images/map.jpg') no-repeat center
     // width: $site-width
@@ -267,7 +279,7 @@ body
   .store
     //height: 700px
     //width: $site-width
-    background: url('/images/stores.jpg') no-repeat center 95px
+    background: url('/images/stores.jpg') no-repeat center top
     background-color: $black
     background-size: cover
     -webkit-background-size: cover
@@ -277,7 +289,7 @@ body
       margin: 0 auto 0
       width: 530px
       text-align: left
-      padding: 0 0 0 150px
+      padding: 0 0 0 50px
       h1, h2, h4
         font-family: $clabol
         text-transform: none
@@ -286,7 +298,7 @@ body
         +text-shadow(rgba($black, .6) -3px 4px 3px)
       h1
         font-size: 72px
-        padding: 280px 0 0 0
+        padding: 120px 0 0 0
       h2
         font-size: 48px
       h4
@@ -356,7 +368,7 @@ body
         border: none
         background-color: #faf6f0
         border: 1px solid #faf6f0
-        height: 58px
+        height: 40px
         width: 378px
         margin: 8px 0 20px
         padding: 0 10px
@@ -382,7 +394,7 @@ body
         font-size: 22px
         letter-spacing: 2px
         background-color: $red
-        width: 400px
+        width: 200px
         margin: 0
         padding: 0
 
@@ -403,7 +415,7 @@ body
       display: block
   .legal
     clear: both
-    height: 112px
+    height: 60px
     width: 900px
     margin: 0 auto
     text-align: left
