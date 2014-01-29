@@ -96,7 +96,7 @@ body
       //display: block
       //width: $site-width
       //height: 100%
-      padding: 120px 0 0 0
+      padding: 120px 0 100px 0
       .we-make-bbq
         width: 312px
         //height: 172px
@@ -120,7 +120,7 @@ body
   .respect
     margin: 0
     background-color: $respect
-    padding: 100px 0 0 0
+    padding: 0
     .respect-graphic
       //display: block
       height: 100%
@@ -189,7 +189,6 @@ body
 
     .menu-table
       position: relative
-      top: -100px
       h1
         font: 36px/20px $clabol
         color: $white
@@ -238,7 +237,7 @@ body
               position: relative
               top: -10px
     .address
-      margin: 0 auto 50px
+      margin: 0 auto 25px
       width: 700px
       h5
         font: 18px/30px $clabol
@@ -249,6 +248,7 @@ body
         text-decoration: none
       h5.phone
         text-transform: none
+        margin: 25px 0 0 0
         span
           font-size: 28px
           color: $white !important
@@ -363,7 +363,7 @@ body
       .error
         color: $red
         margin: 0 0 10px 0
-      input
+      input, textarea
         clear: both
         border: none
         background-color: #faf6f0
@@ -376,7 +376,7 @@ body
         -webkit-border-radius: 8px
         -moz-border-radius: 8px
         -o-border-radius: 8px
-        &[type=text]
+        &[type=text], &[type=textarea]
           font-family: $clabol
           font-weight: normal
           color: $black
@@ -387,6 +387,8 @@ body
             margin: 8px 0 2px 0
             padding: 0 10px
             width: 378px
+          &.comments
+            height: 84px
       .submit
         color: $white
         font-family: $clabol
@@ -399,7 +401,7 @@ body
         padding: 0
 
   .shots
-    height: 800px
+    // height: 800px
     width: $site-width
     background-color: $white
     padding: 50px 0 0 0
