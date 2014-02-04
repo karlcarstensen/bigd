@@ -53,24 +53,23 @@
       <img src="/images/respect.png" class="respect-img" />
       <div class="video">
         <div>
-          <button class="play-btn" data-toggle="modal" data-target="#myModal"></button>
+          <button onclick="addVideo()" class="play-btn" data-toggle="modal" data-target="#myModal"></button>
 
           <!-- Modal -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <button onclick="removeVideo()" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                   <div class="modal-video">
-                    <iframe src="//player.vimeo.com/video/82671157?title=0&amp;byline=0&amp;portrait=0" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <iframe id="bigdvideo" src="" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   </div>
                 </div>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->
-
 
         </div>
       </div>
@@ -254,8 +253,9 @@
       <li class="foursquare"><a href="https://foursquare.com/v/big-d-barbecue/51de3e48501924364d94e284" target="_blank"></a></li>
       <li class="instagram"><a href="http://instagram.com/bigdbarbecue" target="_blank"></a></li>
     </ul>
-    <p>Want us to cater your next event? Wanna get all the latest BBQ-related news? Or maybe you just wanna say howdy? Email us at <a href="mailto:info@bigdbarbecue.com">info@bigdbarbecue.com</a> or enter your info below.</p>
-    <form id="contactform" name="contactform" method="post" action="send_form_email.php">
+    <p>Want us to cater your next event? Wanna get all the latest BBQ-related news? Or maybe you just wanna say howdy? Email us at <a href="mailto:info@bigdbarbecue.com?subject=Contact Big D">info@bigdbarbecue.com</a> or enter your info below.</p>
+    <form id="contactform" name="contactform" method="post" action="/webformmailer.php">
+      <input type="hidden" name="subject" value="Big D Contact Form" />
       <div class="form-spacer">
         <label>NAME <sup>*</sup></label>
         <input type="text" name="name" required />
@@ -269,6 +269,7 @@
         <textarea class="comments" type="textarea" name="comments"></textarea>
       </div>
       <input class="submit" type="submit" value="Submit" />
+      <input type="hidden" name="form_format" value="html" />
     </form>
     <script>
       $("#contactform").validate({
