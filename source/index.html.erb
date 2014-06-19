@@ -242,8 +242,8 @@
     var map;
     function init() {
         var mapOptions = {
-            center: new google.maps.LatLng(32.544209,-97.098085),
-            zoom: 13,
+            center: new google.maps.LatLng(32.566042,-97.135367),
+            zoom: 15,
             zoomControl: true,
             zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.DEFAULT,
@@ -269,12 +269,12 @@ stylers:[{visibility:"simplified"}]},{featureType:"transit",stylers:[{visibility
         var mapElement = document.getElementById('map-view');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-['Big D Barbecue', 'undefined', 32.5661052, -97.13510389999999]
+['Big D Barbecue', 'For the most delicious BBQ you ever tasted. We've got a bib waitin for ya.', 32.5661052, -97.13510389999999]
         ];
         for (i = 0; i < locations.length; i++) {
       if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
             marker = new google.maps.Marker({
-                icon: '/assets/img/markers/solid-pin-red.png',
+                icon: 'http://bigdbarbecue.com/images/bigd-logo.png',
                 position: new google.maps.LatLng(locations[i][2], locations[i][3]),
                 map: map,
                 title: locations[i][0],
@@ -282,7 +282,7 @@ stylers:[{visibility:"simplified"}]},{featureType:"transit",stylers:[{visibility
             });
         }
   google.maps.event.addListener(marker, 'click', function() {
-            var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><h4>"+this.title+"</h4></div>";
+            var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><h4>"+this.title+"</h4><p>"+this.desc+"<p></div>";
             iw = new google.maps.InfoWindow({content:html});
             iw.open(map,marker);
         });
