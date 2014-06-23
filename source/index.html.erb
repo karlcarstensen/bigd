@@ -240,7 +240,7 @@
     var map;
     function init() {
         var mapOptions = {
-            center: new google.maps.LatLng(32.567226,-97.13512),
+            center: new google.maps.LatLng(32.567136,-97.135013),
             zoom: 15,
             zoomControl: true,
             zoomControlOptions: {
@@ -267,12 +267,12 @@ stylers:[{visibility:"simplified"}]},{featureType:"transit",stylers:[{visibility
         var mapElement = document.getElementById('map-view');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-['Big D Barbecue', 'For the most delicious BBQ you ever tasted. We've got a bib waitin for ya.', 32.5661052, -97.13510389999999]
+['Big D Barbecue', 'Call us at 469-251-BIGD (2443)', 32.5661052, -97.13510389999999]
         ];
         for (i = 0; i < locations.length; i++) {
       if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
             marker = new google.maps.Marker({
-                icon: 'http://bigdbarbecue.com/images/bigd-logo.png',
+                icon: 'http://bigdbarbecue.com/images/star.png',
                 position: new google.maps.LatLng(locations[i][2], locations[i][3]),
                 map: map,
                 title: locations[i][0],
