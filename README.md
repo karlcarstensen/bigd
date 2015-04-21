@@ -35,7 +35,7 @@ This project assumes that you have working knowledge of the above technologies a
 2. Make any changes or updates to the code.
 
 3. Commit, with a meaningful commit message that describes the updates.
-`git commit -m "Here is a detailed description of the changes made on this branch"
+`git commit -m "Here is a detailed description of the changes made on this branch`
 
 4. Push to the topic branch on the remote server and issue a pull request for a code review and feedback.
 
