@@ -30,16 +30,25 @@ This project assumes that you have working knowledge of the above technologies a
 ## Changes workflow
 
 1. Create a topic branch for your updates.
-2. Issue a pull request for a code review and feedback.
+`git checkout -b your-topic-branch-name`
+
+2. Make any changes or updates to the code.
+
+3. Commit, with a meaningful commit message that describes the updates.
+`git commit -m "Here is a detailed description of the changes made on this branch"
+
+4. Push to the topic branch on the remote server and issue a pull request for a code review and feedback.
 
 ## Deploying code
 
 The best way to deploy code is to let the built-in compiler create the website for you. To do this, follow the directions below.
 
-1. Make sure that your changes have been committed and you are on the master branch.
+1. Make sure that you have the latest version of the project, any changes have been committed and approved, and you are on the master branch.
 2. Run `middleman build`
-3. When the compiler completes, copy the contents of the build directory to the root of your server in their entirety. Do not copy the build directory itself, only the contents.
+3. When the compiler completes, copy the contents of the build directory to the root of your server in their entirety. Do not copy the build directory itself, only the contents of the folder.
 
 ## Contributing
 
-If you would like to contribute or optimize this project, please follow the above process; fork the repository, create a topic branch, and issue a pull request with your changes. Someone will review it quickly and either merge it or provide feedback regarding the commit.
+If you would like to contribute or optimize this project, please follow the above process (fork the repository, create a topic branch, and issue a pull request with your changes). A member of the project will review it quickly and either merge it or provide feedback regarding the commit.
+
+– Big D
